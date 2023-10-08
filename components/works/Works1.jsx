@@ -19,7 +19,7 @@ const Works1 = () => {
   // start dynamic portfolio with slug
   const [singleData, setSingleData] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const handlePortfolioData = (id) => {
     const find = portfolioData.find((item) => item?.id === id);
@@ -111,7 +111,9 @@ const Works1 = () => {
           <div
             className="rounded-lg p-6 dark:border-[2px] border-[#212425]"
             style={{
-              background: `${theme === "dark" ? "transparent" : item?.bg}`,
+              background: `${
+                resolvedTheme === "dark" ? "transparent" : item?.bg
+              }`,
             }}
             key={item.id}
             onClick={() => handleModle(item?.id)}

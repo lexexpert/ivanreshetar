@@ -5,7 +5,6 @@ import SidebarInfo from "../components/about/SidebarInfo";
 import HeaderNavigation from "../components/header/HeaderNavigation";
 import Header from "../components/header/Header";
 import Service from "../components/service/Service";
-import Brand from "../components/brand/Brand";
 import Footer from "../components/footer/Footer";
 
 const index = () => {

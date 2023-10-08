@@ -3,7 +3,7 @@ import Image from "next/image";
 import serviceData from "../../data/serviceData";
 
 const Service = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <>
@@ -12,7 +12,9 @@ const Service = () => {
           className="about-box dark:bg-transparent"
           key={item.id}
           style={{
-            background: `${theme === "dark" ? "transparent" : item?.bg}`,
+            background: `${
+              resolvedTheme === "dark" ? "transparent" : item?.bg
+            }`,
           }}
         >
           <Image
@@ -28,7 +30,7 @@ const Service = () => {
               {item?.title}
             </h3>
             <p className="leading-8 text-base break-normal whitespace-pre-wrap text-gray-lite dark:text-[#A6A6A6]">
-              {item?.des} {console.log(item?.des?.length)}
+              {item?.des}
             </p>
           </div>
         </div>

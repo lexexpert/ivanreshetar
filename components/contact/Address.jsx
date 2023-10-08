@@ -3,7 +3,7 @@ import Image from "next/image";
 import addressData from "../../data/addressData";
 
 const Address = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <>
@@ -11,7 +11,7 @@ const Address = () => {
         <div
           key={i}
           style={{
-            background: `${theme === "dark" ? "#212425" : item?.bg}`,
+            background: `${resolvedTheme === "dark" ? "#212425" : item?.bg}`,
           }}
           className="flex flex-wrap p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
         >

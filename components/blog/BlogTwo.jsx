@@ -11,7 +11,7 @@ import Comments from "./Comments";
 const BlogTwo = () => {
   const [singleData, setSingleData] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const handleblogsData = (id) => {
     const find = blogsData.find((item) => item?.id === id);
@@ -32,7 +32,9 @@ const BlogTwo = () => {
           <div
             key={item.id}
             style={{
-              background: `${theme === "dark" ? "transparent" : item?.bg}`,
+              background: `${
+                resolvedTheme === "dark" ? "transparent" : item?.bg
+              }`,
             }}
             className="p-5 rounded-lg mb-2 h-full dark:border-[#212425] dark:border-2"
           >
