@@ -27,7 +27,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET_DIR }}
           ARGS: -rlgoDzvc
-            --exclude=node_modules
+            -i
             --exclude=.next
             --exclude=.env
             --exclude=.env.example
@@ -37,8 +37,8 @@ jobs:
             --exclude=.github
             --exclude=*.gitkeep
             --exclude=.gitignore
+            --exclude=node_modules
             --delete
-            -i
   build:
     runs-on: ubuntu-latest
     needs: deploy
