@@ -12,6 +12,7 @@ module.exports = {
 
       // default breakpoints but with 40px removed
       screens: {
+        xs: "100%",
         sm: "100%",
         md: "100%",
         lg: "992px",

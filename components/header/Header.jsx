@@ -12,13 +12,13 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="container w-full bg-[#F3F6F6] dark:bg-black lg:bg-transparent lg:dark:bg-transparent flex justify-between py-0  lg:px-0 lg:pt-[20px]">
+    <div className="sm:absolute bg-transparent lg:relative container w-full  flex justify-between py-0  lg:px-0 lg:pt-[20px]">
       <div className="w-full flex justify-between  px-4">
         {/* website logo */}
 
-        <Link href="/">{/* Ivan Reshetar */}</Link>
+        <Link href="/"></Link>
         {/* start mobile menu toggle and mode btn */}
-        <div className="flex items-center">
+        <div className="flex items-center my-2">
           <DarkMode />
           <DarkModeMobile />
           {!menuOpen ? (
@@ -46,7 +46,7 @@ const Header = () => {
         <ul
           className={`${
             menuOpen
-              ? "block  rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#212425]"
+              ? "block py-4 rounded-[20px] shadow-md absolute left-0 top-12 z-[22222222222222] w-full bg-white dark:bg-[#212425]"
               : "flex my-12 "
           }`}
         >

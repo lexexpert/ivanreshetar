@@ -15,7 +15,7 @@ const HeaderNavigation = () => {
         <ul
           className={`${
             menuOpen
-              ? "block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]"
+              ? "block py-4 rounded-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]"
               : "flex "
           }`}
         >
