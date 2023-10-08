@@ -12,14 +12,13 @@ const CommonContact = ({ condition }) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ndwp1pj",
-        "template_9yepznb",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
-          console.log(result);
           toast.success("Message Sent successfully!", {
             position: "top-right",
             autoClose: 5000,
@@ -86,14 +85,14 @@ const CommonContact = ({ condition }) => {
         <div className="relative z-0 w-full mb-8 group">
           <input
             type="email"
-            name="user_email"
+            name="email"
             className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
             placeholder=" "
-            id="user_email"
+            id="email"
             required
           />
           <label
-            htmlFor="user_email"
+            htmlFor="email"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
           >
             Email *
