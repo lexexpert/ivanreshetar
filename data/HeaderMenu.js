@@ -17,18 +17,18 @@ module.exports = [
     routePath: "/resume",
     icon: <CgNotes />,
   },
-  {
-    id: 3,
-    name: "Portfolio",
-    routePath: "/portfolio",
-    icon: <FiCodesandbox />,
-  },
-  {
-    id: 4,
-    name: "Blog",
-    routePath: "/blog",
-    icon: <FaBlogger />,
-  },
+  // {
+  //   id: 3,
+  //   name: "Portfolio",
+  //   routePath: "/portfolio",
+  //   icon: <FiCodesandbox />,
+  // },
+  // {
+  //   id: 4,
+  //   name: "Blog",
+  //   routePath: "/blog",
+  //   icon: <FaBlogger />,
+  // },
   {
     id: 5,
     name: "Contact",
