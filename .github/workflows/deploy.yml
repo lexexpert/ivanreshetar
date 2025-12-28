@@ -50,8 +50,10 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            nvm use 18
+            nvm use 24
             cd ${{ secrets.TARGET_DIR }}
             yarn
             yarn build
-            pm2 reload ivanreshetar.com
+            pm2 restart ecosystem.config.cjs --only ivanreshetar.com || \
+              pm2 start ecosystem.config.cjs --only ivanreshetar.com
+            pm2 save

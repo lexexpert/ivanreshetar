@@ -1,4 +1,4 @@
-module.exports = {
+const personalData = {
   name: "Ivan Reshetar",
   title: "Senior Software Developer",
   description:
@@ -21,3 +21,5 @@ module.exports = {
     email: "ivanreshetar@gmail.com",
   },
 };
+
+export default personalData;

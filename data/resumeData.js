@@ -1,7 +1,7 @@
-import { MdOutlineBusinessCenter, MdOutlineSchool } from "react-icons/md";
 import { FaAward } from "react-icons/fa";
+import { MdOutlineBusinessCenter, MdOutlineSchool } from "react-icons/md";
 
-module.exports = [
+const resumeData = [
   {
     title: "Experience",
     icon: <MdOutlineSchool />,
@@ -144,3 +144,5 @@ module.exports = [
     ],
   },
 ];
+
+export default resumeData;

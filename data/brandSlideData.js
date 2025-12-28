@@ -1,4 +1,4 @@
-module.exports = [
+const brandSlideData = [
   {
     id: 1,
     img: "/images/slider/brand-1.png",
@@ -24,3 +24,5 @@ module.exports = [
     img: "/images/slider/brand-1.png",
   },
 ];
+
+export default brandSlideData;

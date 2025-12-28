@@ -1,6 +1,6 @@
 import personalData from "./personalData";
 
-module.exports = [
+const addressData = [
   {
     id: "01",
     icon: "/images/contact/phone-call 1.png",
@@ -52,3 +52,5 @@ module.exports = [
     bg: "#F2F4FF",
   },
 ];
+
+export default addressData;

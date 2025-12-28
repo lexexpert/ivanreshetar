@@ -1,4 +1,4 @@
-module.exports = [
+const worksData = [
   {
     id: "1",
     tag: "UI/UX",
@@ -126,3 +126,5 @@ module.exports = [
       "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.",
   },
 ];
+
+export default worksData;
