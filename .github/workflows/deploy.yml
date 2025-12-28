@@ -51,7 +51,6 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            nvm use 24
             cd ${{ secrets.TARGET_DIR }}
             yarn
             yarn build
