@@ -55,6 +55,9 @@ jobs:
             cd ${{ secrets.TARGET_DIR }}
             yarn
             yarn build
+            sudo chown -R www:www ivanreshetar.com
+            sudo find ivanreshetar.com -type d -exec chmod 755 {} \;
+            sudo find ivanreshetar.com -type f -exec chmod 644 {} \;
             pm2 restart ecosystem.config.cjs --only ivanreshetar.com || \
               pm2 start ecosystem.config.cjs --only ivanreshetar.com
             pm2 save
