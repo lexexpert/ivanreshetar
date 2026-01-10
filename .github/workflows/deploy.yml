@@ -53,13 +53,14 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.TARGET_DIR }}
+            yarn
+            yarn build
             cd ..
             sudo chown -R www:www ivanreshetar.com
             sudo find ivanreshetar.com -type d -exec chmod 755 {} \;
             sudo find ivanreshetar.com -type f -exec chmod 644 {} \;
+            sudo find ivanreshetar.com/node_modules/.bin -type f -exec chmod 755 {} \;
             cd ${{ secrets.TARGET_DIR }}
-            yarn
-            yarn build
             pm2 restart ecosystem.config.cjs --only ivanreshetar.com || \
               pm2 start ecosystem.config.cjs --only ivanreshetar.com
             pm2 save
