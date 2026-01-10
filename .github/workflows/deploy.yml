@@ -54,6 +54,7 @@ jobs:
           script: |
             cd ${{ secrets.TARGET_DIR }}
             yarn
+            chmod -R +x node_modules/.bin
             yarn build
             cd ..
             sudo chown -R www:www ivanreshetar.com
